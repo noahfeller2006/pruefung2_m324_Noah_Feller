@@ -13,10 +13,13 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v3
 
+      - name: AI Code Review Action
+        uses: aidar-freeed/ai-codereviewer@v2.7.0
+            
       - name: AI Code Reviewer
-        uses: noahfeller2006/pruefung2_m324_Noah_Feller@main
+        uses: noahfeller2006/ai-code-rewiever@main
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           OPENAI_API_KEY: ${{secrets.OPENAI_API_KEY}}
           open_ai_model: gpt-3.5-turbo
           with-comment: true
