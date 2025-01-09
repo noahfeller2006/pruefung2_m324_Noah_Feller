@@ -16,6 +16,7 @@ jobs:
       - name: AI Code Reviewer
         uses: noahfeller2006/pruefung2_m324_Noah_Feller@main
         with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{secrets.OPENAI_API_KEY}}
           open_ai_model: gpt-3.5-turbo
           with-comment: true
